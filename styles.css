@@ -1,0 +1,1760 @@
+/* HF Pathways - Complete Stylesheet (All Pages) */
+
+/* ==================== RESET & BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    padding-top: 70px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    zoom: 0.8;
+}
+
+/* Firefox-specific zoom using transform */
+@-moz-document url-prefix() {
+    body {
+        transform: scale(0.8);
+        transform-origin: 0 0;
+        width: 125%;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==================== NAVIGATION BAR ==================== */
+nav {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0066cc;
+}
+
+.logo svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    padding: 10px 25px;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.nav-links li a.active {
+    background-color: #0066cc;
+    color: white;
+}
+
+.nav-links li a:hover:not(.active) {
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
+/* ==================== BREADCRUMB ==================== */
+.breadcrumb {
+    background-color: white;
+    padding: 12px 50px;
+    margin-bottom: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+.breadcrumb .current {
+    color: #666;
+}
+
+.breadcrumb .separator {
+    color: #999;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    color: white;
+    padding: 60px 50px;
+    position: relative;
+}
+
+/* Page 1 - Home Hero */
+.page-home .hero {
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    text-align: center;
+}
+
+/* Page 2 - Diagnosis Hero */
+.page-diagnosis .hero {
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+}
+
+/* Page 3 - Treatment Hero */
+.page-treatment .hero {
+    background: linear-gradient(to right, #ff6b35 0%, #ffa500 35%, #9dc209 70%, #7cb342 100%);
+    text-align: center;
+}
+
+/* Page 4 - Management Hero */
+.page-management .hero {
+    background: linear-gradient(135deg, #0099cc 0%, #0077aa 100%);
+    text-align: center;
+}
+
+/* Page 5 - End Stage Hero */
+.page-endstage .hero {
+    background: linear-gradient(135deg, #78909c 0%, #90a4ae 100%);
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nhs-logo-container {
+    flex-shrink: 0;
+}
+
+.nhs-logo {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    height: auto;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* ==================== BUTTONS ==================== */
+.download-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.download-btn:hover {
+    background-color: white;
+    color: #0066cc;
+    transform: translateY(-2px);
+}
+
+.download-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.download-btn-dark {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+}
+
+.download-btn-dark:hover {
+    background-color: #0052a3;
+    color: white;
+}
+
+.learn-more-btn {
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    border-bottom-color: #0066cc;
+}
+
+/* ==================== SCROLL TO TOP BUTTON ==================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background-color: #0052a3;
+    transform: translateY(-3px);
+}
+
+.scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==================== MAIN CONTAINER ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+/* ==================== SECTION CARDS ==================== */
+.section-card, .intro-section, .learning-section, .types-section, .pathway-section {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.section-card h2, .intro-section h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.intro-section h2 {
+    color: #0066cc;
+    font-size: 32px;
+}
+
+.intro-section p, .section-card p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* ==================== BOXES ==================== */
+.highlight-box, .definition-box {
+    padding: 25px;
+    border-radius: 6px;
+    margin-top: 25px;
+    border-left: 4px solid;
+}
+
+.highlight-box.blue, .definition-box {
+    background-color: #e8f4fd;
+    border-left-color: #0066cc;
+}
+
+.highlight-box.red {
+    background-color: #ffebe9;
+    border-left-color: #d93025;
+}
+
+.highlight-box p, .definition-box p {
+    margin: 0;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.definition-box p {
+    margin-bottom: 10px;
+}
+
+.definition-box .reference {
+    color: #666;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.highlight-box strong, .definition-box strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.management-note, .referral-method, .diuretics-section {
+    background: #e8f4fd;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.diuretics-section {
+    border-left: 4px solid #0066cc;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+}
+
+.management-note p, .referral-method p, .diuretics-section p {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.management-note strong, .referral-method strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.diuretics-section h4 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.diuretics-section h4 svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* ==================== CARDS ==================== */
+.learning-card, .pathway-card, .type-card, .sign-card, .principle-card {
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.learning-card, .pathway-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.learning-card {
+    border: 2px solid #0066cc;
+}
+
+.learning-card:hover, .pathway-card:hover, .type-card:hover {
+    box-shadow: 0 4px 12px rgba(0,102,204,0.15);
+    transform: translateY(-2px);
+}
+
+.learning-card p {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.learning-footer {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Type Cards (HFrEF, HFmrEF, HFpEF) */
+.type-card {
+    border-radius: 8px;
+    padding: 25px;
+    border: 3px solid;
+}
+
+.type-card.orange {
+    border-color: #ff6b35;
+    background: #fff9f7;
+}
+
+.type-card.yellow {
+    border-color: #ffc107;
+    background: #fffef7;
+}
+
+.type-card.green {
+    border-color: #34a853;
+    background: #f7fef9;
+}
+
+.type-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.type-card.orange h3 {
+    color: #ff6b35;
+}
+
+.type-card.yellow h3 {
+    color: #f39c12;
+}
+
+.type-card.green h3 {
+    color: #34a853;
+}
+
+.type-card .subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.type-card .ef-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.type-card .description {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Pathway Cards */
+.pathway-card {
+    border: 1px solid #e0e0e0;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.pathway-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pathway-icon svg {
+    width: 50px;
+    height: 50px;
+}
+
+.pathway-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.pathway-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Sign Cards (Page 5) */
+.sign-card {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.sign-card h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sign-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==================== TABLES ==================== */
+.clinical-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.clinical-table thead {
+    background-color: #f5f5f5;
+}
+
+.clinical-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.clinical-table td {
+    padding: 15px;
+    color: #555;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.clinical-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.clinical-table tbody tr:last-child {
+    background-color: #e3f2fd;
+}
+
+.clinical-table tbody tr:last-child td {
+    font-weight: 600;
+    color: #0066cc;
+}
+
+.table-reference {
+    color: #666;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* ==================== STEP CARDS ==================== */
+.step-card {
+    border: 3px solid;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    background: white;
+    position: relative;
+}
+
+.step-card.blue {
+    background: #e3f2fd;
+    border-color: #0066cc;
+}
+
+.step-card.yellow {
+    background: #fffef7;
+    border-color: #ffc107;
+}
+
+.step-card.green {
+    background: #f1f8e9;
+    border-color: #7cb342;
+}
+
+.step-badge {
+    background: #0066cc;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.step-badge.yellow-badge {
+    background: #ffc107;
+    color: #333;
+}
+
+.step-badge.green-badge {
+    background: #7cb342;
+}
+
+.step-card h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.step-card strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.step-content {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.step-content h4 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.step-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.step-content li {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.step-content li::before {
+    content: "•";
+    color: #0066cc;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.step-content li strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.step-arrow {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.step-arrow svg {
+    width: 40px;
+    height: 40px;
+    color: #0066cc;
+}
+
+/* ==================== RESULT CARDS (Diagnosis) ==================== */
+.result-card, .echo-card {
+    border: 3px solid;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+}
+
+.result-card.green, .echo-card.green {
+    border-color: #34a853;
+    background: #f7fef9;
+}
+
+.result-card.yellow, .echo-card.yellow {
+    border-color: #ffc107;
+    background: #fffef7;
+}
+
+.result-card.red {
+    border-color: #d93025;
+    background: #ffebe9;
+}
+
+.echo-card.orange {
+    border-color: #ff6b35;
+    background: #fff9f7;
+}
+
+.result-range {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.result-card h4, .echo-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.result-card.green h4, .echo-card.green h4 {
+    color: #34a853;
+}
+
+.result-card.yellow h4, .echo-card.yellow h4 {
+    color: #f39c12;
+}
+
+.result-card.red h4 {
+    color: #d93025;
+}
+
+.echo-card.orange h4 {
+    color: #ff6b35;
+}
+
+.result-card p, .echo-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.echo-card .ef-value {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* ==================== TREATMENT PAGE STYLES ==================== */
+.treatment-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tab-button {
+    flex: 1;
+    padding: 18px 30px;
+    border: none;
+    background: white;
+    color: #666;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-button:hover {
+    background: #f5f5f5;
+}
+
+.tab-button.active {
+    color: white;
+    border-bottom: none;
+}
+
+.tab-button.active.orange {
+    background: #ff6b35;
+}
+
+.tab-button.active.yellow {
+    background: #ffa500;
+}
+
+.tab-button.active.green {
+    background: #7cb342;
+}
+
+.treatment-content {
+    display: none;
+}
+
+.treatment-content.active {
+    display: block;
+}
+
+.treatment-card {
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-left: 5px solid;
+}
+
+.treatment-card.orange {
+    border-left-color: #ff6b35;
+}
+
+.treatment-card.yellow {
+    border-left-color: #ffa500;
+}
+
+.treatment-card.green {
+    border-left-color: #7cb342;
+}
+
+.treatment-card h2 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.treatment-card h2 svg {
+    width: 28px;
+    height: 28px;
+    color: #ff6b35;
+}
+
+.ef-subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.four-pillars h3, .titration-section h3, .followup-section h3, .specialist-section h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.pillars-intro {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.pillars-intro strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.pillar-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    border: 2px solid #e0e0e0;
+}
+
+.pillar-badge {
+    background: #0066cc;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.pillar-card h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.pillar-card ul {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.pillar-card li {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.pillar-card li::before {
+    content: "•";
+    color: #0066cc;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.pillar-note {
+    color: #666;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.titration-section, .followup-section {
+    margin-bottom: 30px;
+}
+
+.titration-list, .followup-list {
+    list-style: none;
+}
+
+.titration-list li, .followup-list li {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.titration-list li::before, .followup-list li::before {
+    content: "→";
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+}
+
+.titration-list li strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.safety-section {
+    background: #ffebe9;
+    border-left: 4px solid #d93025;
+    padding: 20px 25px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.safety-section h4 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.safety-section h4 svg {
+    width: 20px;
+    height: 20px;
+    color: #d93025;
+}
+
+.safety-section p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.safety-section strong {
+    color: #d93025;
+    font-weight: 600;
+}
+
+.specialist-section {
+    background: #fffef7;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.specialist-section p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.specialist-section strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.specialist-section ul {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.specialist-section li {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.specialist-section li::before {
+    content: "•";
+    color: #ffc107;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.followup-section {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+/* ==================== MANAGEMENT PAGE (Page 4) ==================== */
+.overview-box {
+    background: #e8f4fd;
+    border-left: 4px solid #0066cc;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.overview-box h2 {
+    color: #0066cc;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.overview-list {
+    list-style: none;
+}
+
+.overview-list li {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.overview-list li::before {
+    content: "●";
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: -12px;
+}
+
+.overview-list li strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.decompensated-section {
+    background: white;
+    border: 3px solid #d93025;
+    border-radius: 8px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.decompensated-section h2 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.decompensated-section h2 svg {
+    width: 28px;
+    height: 28px;
+    color: #d93025;
+}
+
+.decompensated-section .subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: white;
+    border: 2px solid #0066cc;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info-card h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card h3 svg {
+    width: 24px;
+    height: 24px;
+    color: #0066cc;
+}
+
+.info-card h4 {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-card li {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.info-card li::before {
+    content: "●";
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+}
+
+.info-card strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.info-card .note {
+    background: #f0f0f0;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+}
+
+.info-card .note strong {
+    color: #333;
+}
+
+/* ==================== END STAGE CARE (Page 5) ==================== */
+.definition-section {
+    background: white;
+    border-left: 4px solid #666;
+    padding: 35px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.definition-section h2 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.definition-section p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.definition-section .subtitle {
+    color: #777;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.recognizing-section {
+    background: white;
+    border: 3px solid #d93025;
+    border-radius: 8px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.recognizing-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.recognizing-section .reference {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.management-principles-section {
+    background: white;
+    border: 3px solid #0066cc;
+    border-radius: 8px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.management-principles-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.management-principles-section h2 svg {
+    width: 26px;
+    height: 26px;
+    color: #0066cc;
+}
+
+.principle-card {
+    border-radius: 8px;
+    padding: 20px;
+    border: 2px solid;
+}
+
+.principle-card.cyan {
+    background: #e0f7fa;
+    border-color: #00bcd4;
+}
+
+.principle-card.blue {
+    background: #e3f2fd;
+    border-color: #2196f3;
+}
+
+.principle-card.green {
+    background: #f1f8e9;
+    border-color: #8bc34a;
+}
+
+.principle-card.yellow {
+    background: #fff9e6;
+    border-color: #ffc107;
+}
+
+.principle-card.gray {
+    background: #f5f5f5;
+    border-color: #9e9e9e;
+}
+
+.principle-card.pink {
+    background: #fce4ec;
+    border-color: #e91e63;
+}
+
+.principle-card h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.principle-card h3 svg {
+    width: 20px;
+    height: 20px;
+}
+
+.principle-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.core-principles-section {
+    background: white;
+    border: 2px solid #0066cc;
+    border-radius: 8px;
+    padding: 35px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.core-principles-section h2 {
+    color: #0066cc;
+    font-size: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.core-principles-section h2 svg {
+    width: 26px;
+    height: 26px;
+}
+
+.core-principles-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.core-principles-list li {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.core-principles-list li::before {
+    content: "●";
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: -12px;
+}
+
+.core-principles-list li strong {
+    color: #000;
+    font-weight: 600;
+}
+
+/* ==================== REMINDERS & PRINCIPLES ==================== */
+.considerations-section, .reminders-section, .principles-box, .considerations-box {
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    border: 2px solid #0066cc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.considerations-box {
+    background: #f8f9fa;
+    border-color: #388e3c;
+    margin-top: 30px;
+}
+
+.considerations-box h3 {
+    color: #388e3c;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.considerations-box h3 svg {
+    width: 24px;
+    height: 24px;
+}
+
+.considerations-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.considerations-box li {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.considerations-box li::before {
+    content: "•";
+    color: #388e3c;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.considerations-box li strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.considerations-section h2, .reminders-section h2, .principles-box h3 {
+    color: #0066cc;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.reminders-section h2, .principles-box h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reminders-section h2 svg, .principles-box h3 svg {
+    width: 26px;
+    height: 26px;
+}
+
+.considerations-section ul, .reminders-list, .principles-list {
+    list-style: none;
+}
+
+.considerations-section li {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.considerations-section li strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.considerations-section li::before {
+    content: "• ";
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.reminders-list li {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.reminders-list li::before {
+    content: "✓";
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: 8px;
+    top: 0;
+}
+
+.principles-list li {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.principles-list li strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.principles-list li::before {
+    content: "• ";
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+/* ==================== GRIDS ==================== */
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.results-grid, .echo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.signs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.two-column-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* ==================== TEXT UTILITIES ==================== */
+strong {
+    font-weight: 600;
+}
+
+.key-point {
+    color: #333;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.key-point strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.clinical-intro {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .types-grid,
+    .pathway-grid,
+    .results-grid,
+    .echo-grid,
+    .signs-grid,
+    .principles-grid,
+    .pillars-grid,
+    .two-column-section {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nhs-logo {
+        width: 150px;
+    }
+
+    .clinical-table {
+        font-size: 12px;
+    }
+
+    .clinical-table th,
+    .clinical-table td {
+        padding: 10px;
+    }
+
+    .treatment-tabs {
+        flex-direction: column;
+    }
+}
+
+/* ==================== HFPEF MANAGEMENT ITEMS ==================== */
+.hfpef-management {
+    margin-bottom: 30px;
+}
+
+.hfpef-management h3 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.management-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #388e3c;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.management-item:hover {
+    background: #f0f4f0;
+    transform: translateX(5px);
+}
+
+.management-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.management-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: #388e3c;
+}
+
+.management-content {
+    flex: 1;
+}
+
+.management-content h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.management-content p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.management-content .management-note {
+    color: #666;
+    font-size: 14px;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.management-content strong {
+    color: #000;
+    font-weight: 600;
+}
