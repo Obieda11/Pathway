@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Pathway - HF Pathways</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-diagnosis">
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            HF Pathways
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html" class="active">Diagnosis</a></li>
+            <li><a href="page3.html">Treatment</a></li>
+            <li><a href="page4.html">Management</a></li>
+            <li><a href="page5.html">End Stage Care</a></li>
+        </ul>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="separator">›</li>
+            <li class="current">Diagnosis Pathway</li>
+        </ul>
+    </div>
+
+    <!-- Hero Section with NHS Logo -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="nhs-logo-container">
+                <svg class="nhs-logo" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="300" height="120" fill="white"/>
+                    <rect x="15" y="15" width="90" height="45" fill="#005EB8" rx="3"/>
+                    <text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">NHS</text>
+                    <text x="15" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#212B32">Mid Yorkshire Teaching</text>
+                    <text x="15" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#005EB8">NHS Trust</text>
+                </svg>
+            </div>
+            <div class="hero-text">
+                <h1>Diagnosis Pathway</h1>
+                <p>Systematic approach to diagnosing heart failure in Primary Care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Defining Heart Failure Section -->
+        <div class="section-card">
+            <h2>Defining Heart Failure</h2>
+            
+            <div class="definition-box">
+                <p><strong>A clinical syndrome with typical symptoms/signs caused by structural and/or functional cardiac abnormality, resulting in a reduced cardiac output or elevated intracardiac pressures at rest/stress</strong></p>
+                <p class="reference">ESC HF guidelines, EHJ 2016; 37:2129</p>
+            </div>
+
+            <p class="key-point"><strong>Key Point:</strong> Demonstration of an underlying cardiac cause is central to the diagnosis of HF</p>
+        </div>
+
+        <!-- Clinical Features Section -->
+        <div class="section-card">
+            <h2>Clinical Features of Heart Failure</h2>
+            
+            <p class="clinical-intro">Clinical assessment alone has limitations. The following table shows sensitivity and specificity of common clinical features:</p>
+
+            <table class="clinical-table">
+                <thead>
+                    <tr>
+                        <th>Clinical Feature</th>
+                        <th>Sensitivity (%)</th>
+                        <th>Specificity (%)</th>
+                        <th>Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>History of MI</td>
+                        <td>26</td>
+                        <td>89</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Dyspnoea</td>
+                        <td>87</td>
+                        <td>51</td>
+                        <td>38</td>
+                    </tr>
+                    <tr>
+                        <td>Orthopnoea</td>
+                        <td>44</td>
+                        <td>89</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>PND</td>
+                        <td>33</td>
+                        <td>76</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>High HR >100bpm</td>
+                        <td>7</td>
+                        <td>99</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Oedema</td>
+                        <td>53</td>
+                        <td>72</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Elevated JVP</td>
+                        <td>52</td>
+                        <td>70</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Cardiomegaly (displaced apex)</td>
+                        <td>27</td>
+                        <td>85</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Added Heart Sounds (S3 or S4)</td>
+                        <td>11</td>
+                        <td>99</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Lung Crackles</td>
+                        <td>51</td>
+                        <td>81</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Hepatomegaly</td>
+                        <td>17</td>
+                        <td>97</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Elevated NTproBNP</td>
+                        <td>99</td>
+                        <td>43</td>
+                        <td>42</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="table-reference">Mant et al. Health Technology Assessment. Vol 13:Issue13, July 2019. Watson et al. BMJ 2009;320:236238. Ludman et al. BMJ 2015;3:201410</p>
+        </div>
+
+        <!-- Diagnostic Pathway -->
+        <div class="pathway-section">
+            <h2>Suspected New Diagnosis - Diagnostic Pathway</h2>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+                <span class="step-badge">Step 1</span>
+                <h3>Initial Assessment & Investigations</h3>
+                <p>Following history and clinical examination, <strong>without delay</strong> refer for:</p>
+
+                <div class="step-content">
+                    <h4>Blood Tests:</h4>
+                    <ul>
+                        <li><strong>NTproBNP</strong> (primary diagnostic biomarker)</li>
+                        <li>FBC, U&E, LFTs, TFTs, HbA1c</li>
+                    </ul>
+                    <h4 style="margin-top: 15px;">ECG</h4>
+                </div>
+
+                <div class="management-note">
+                    <p><strong>Management:</strong> Start a loop diuretic to relieve symptoms and consider a CXR as long as it doesn't delay treatment</p>
+                </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="step-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <span class="step-badge">Step 2</span>
+                <h3>NTproBNP Results & Referral Pathway</h3>
+
+                <div class="results-grid">
+                    <div class="result-card green">
+                        <div class="result-range">< 400 ng/L</div>
+                        <h4>HF Unlikely</h4>
+                        <p>Consider alternative diagnosis</p>
+                    </div>
+
+                    <div class="result-card yellow">
+                        <div class="result-range">400-2000 ng/L</div>
+                        <h4>Refer to HF Services</h4>
+                        <p>Specialist review of echo within 6 weeks</p>
+                    </div>
+
+                    <div class="result-card red">
+                        <div class="result-range">> 2000 ng/L</div>
+                        <h4>Urgent Referral</h4>
+                        <p>Specialist assessment and echo within 2 weeks</p>
+                    </div>
+                </div>
+
+                <div class="referral-method">
+                    <p><strong>Referral Method:</strong> Refer urgently to HF services via e-consultation or electronic referral system (ERS) if NTproBNP ≥ 400 ng/L</p>
+                </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="step-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <span class="step-badge">Step 3</span>
+                <h3>Echo Results & HF Classification</h3>
+
+                <div class="echo-grid">
+                    <div class="echo-card orange">
+                        <h4>HFrEF</h4>
+                        <p class="ef-value">EF ≤ 40%</p>
+                        <p>Proceed to HFrEF treatment pathway</p>
+                    </div>
+
+                    <div class="echo-card yellow">
+                        <h4>HFmrEF</h4>
+                        <p class="ef-value">EF 41-49%</p>
+                        <p>Proceed to HFmrEF treatment pathway</p>
+                    </div>
+
+                    <div class="echo-card green">
+                        <h4>HFpEF</h4>
+                        <p class="ef-value">EF ≥ 50%</p>
+                        <p>Proceed to HFpEF treatment pathway</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Diagnostic Reminders -->
+        <div class="reminders-section">
+            <h2>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                Key Diagnostic Reminders
+            </h2>
+            <ul class="reminders-list">
+                <li>Clinical features alone have poor diagnostic accuracy - biomarkers are essential</li>
+                <li>Start loop diuretics for symptom relief while awaiting diagnostic results</li>
+                <li>Urgent referral for NTproBNP > 2000 ng/L (assessment within 2 weeks)</li>
+                <li>Demonstration of underlying cardiac cause is central to HF diagnosis</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollTopBtn" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
