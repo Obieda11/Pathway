@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HF Pathways - Heart Failure Diagnostic and Treatment Pathways</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body class="page-home">
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            HF Pathways
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="page2.html">Diagnosis</a></li>
+            <li><a href="page3.html">Treatment</a></li>
+            <li><a href="page4.html">Management</a></li>
+            <li><a href="page5.html">End Stage Care</a></li>
+        </ul>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="separator">›</li>
+            <li class="current">Overview</li>
+        </ul>
+    </div>
+
+    <!-- Hero Section with NHS Logo -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="nhs-logo-container">
+                <svg class="nhs-logo" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="300" height="120" fill="white"/>
+                    <rect x="15" y="15" width="90" height="45" fill="#005EB8" rx="3"/>
+                    <text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">NHS</text>
+                    <text x="15" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#212B32">Mid Yorkshire Teaching</text>
+                    <text x="15" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#005EB8">NHS Trust</text>
+                </svg>
+            </div>
+            <div class="hero-text">
+                <h1>Heart Failure Diagnostic and Treatment Pathways</h1>
+                <p>Evidence-based guidance for Primary Care professionals</p>
+                <button class="download-btn" onclick="downloadPage()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <div class="section-header">
+                <h2>Introduction</h2>
+            </div>
+            <p>Heart failure affects over <strong>a million people across the UK</strong> with <strong>200,000 new diagnoses every year</strong>. It is a life-limiting condition that too often causes emergency hospital admissions, poor quality of life and ultimately early death.</p>
+            
+            <p>It is possible to live well with heart failure and our Heart Failure pathways have been standardised for use in Primary Care services to facilitate referrals to diagnostic and heart failure treatment services.</p>
+
+            <div class="highlight-box blue">
+                <p>Early diagnosis of people with heart failure with prompt access to integrated services and specialist care can help to cut emergency admissions, improve quality of life and give people the opportunity to live well and longer.</p>
+            </div>
+
+            <div class="highlight-box red">
+                <p><strong>Key Statistic:</strong> 80% of heart failure is diagnosed in hospital yet 40% of people had symptoms that should have triggered an earlier assessment in Primary Care in the months prior to hospital admission.</p>
+            </div>
+        </div>
+
+        <!-- Learning Outcomes Section -->
+        <div class="learning-section">
+            <h2>Learning Outcomes</h2>
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <p>Define heart failure syndrome</p>
+                </div>
+                <div class="learning-card">
+                    <p>Appreciate the challenge of heart failure</p>
+                </div>
+                <div class="learning-card">
+                    <p>Know how best to diagnose heart failure</p>
+                </div>
+                <div class="learning-card">
+                    <p>Manage heart failure in Primary Care</p>
+                </div>
+            </div>
+            <div class="learning-footer">
+                Underpinned by new integrated heart failure care pathways
+            </div>
+        </div>
+
+        <!-- Types of Heart Failure Section -->
+        <div class="types-section">
+            <h2>Types of Heart Failure</h2>
+            <div class="types-grid">
+                <div class="type-card orange">
+                    <h3>HFrEF</h3>
+                    <p class="subtitle">Heart Failure with Reduced Ejection Fraction</p>
+                    <div class="ef-value">EF ≤ 40%</div>
+                    <p class="description">Weakened heart muscle can't squeeze effectively (Systolic HF)</p>
+                </div>
+                <div class="type-card yellow">
+                    <h3>HFmrEF</h3>
+                    <p class="subtitle">Heart Failure with Mildly Reduced Ejection Fraction</p>
+                    <div class="ef-value">EF 41-49%</div>
+                    <p class="description">Intermediate category with some reduction in pumping ability</p>
+                </div>
+                <div class="type-card green">
+                    <h3>HFpEF</h3>
+                    <p class="subtitle">Heart Failure with Preserved Ejection Fraction</p>
+                    <div class="ef-value">EF ≥ 50%</div>
+                    <p class="description">Stiff heart muscle can't relax normally (Diastolic HF)</p>
+                </div>
+            </div>
+
+            <!-- Pathway Cards -->
+            <div class="pathway-grid">
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Diagnosis Pathway</h3>
+                    <p>Step-by-step guide to diagnosing heart failure with NTproBNP criteria and assessment protocols.</p>
+                    <a href="page2.html" class="learn-more-btn">Learn More</a>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#d93025" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3>Treatment Pathways</h3>
+                    <p>Evidence-based treatment protocols for HFrEF, HFmrEF, and HFpEF aligned with ESC guidelines.</p>
+                    <a href="page3.html" class="learn-more-btn">Learn More</a>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#34a853" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </div>
+                    <h3>Primary Care Management</h3>
+                    <p>Practical guidance for managing decompensated heart failure and ongoing patient care.</p>
+                    <a href="page4.html" class="learn-more-btn">Learn More</a>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>End Stage Care</h3>
+                    <p>Compassionate end-of-life care guidance for patients with advanced heart failure.</p>
+                    <a href="page5.html" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Considerations Section -->
+        <div class="considerations-section">
+            <h2>Important Considerations</h2>
+            <ul>
+                <li><strong>Individualised Care:</strong> Investigation and management must always be individualised taking into account frailty, palliative and end of life considerations and the patient's wishes.</li>
+                <li><strong>Frailty Awareness:</strong> Many heart failure patients will be living with frailty. Consider risk of fall/fracture/electrolyte disturbances.</li>
+                <li><strong>Recent Advances:</strong> Recent advances in pharmacological treatment have expanded options for patients, aligned with ESC guidelines.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollTopBtn" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
